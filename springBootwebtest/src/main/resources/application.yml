@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: webTest
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/schedule?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: taoqy
+    password: password123
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 2
+    minIdle: 1
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: SELECT 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: true
+    poolPreparedStatements: false
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,slf4j
+    logSlowSql: true
+server:
+  port: 8081
